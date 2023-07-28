@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Scope+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 20px;
+    font-family: 'Scope One', serif;
+}
+
+.quiz-heading{
+    font-size: 25px;
+    color: lightgrey;
+    width: 400px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+#container{
+    margin : 80px auto;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.932);
+    height: 470px;
+    width : 1000px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
+
+#start{
+   width: 100vw; 
+   height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+
+}
+
+#startContainer {
+    font-size: 1.5em;
+    font-weight: bolder;
+    width:100px;
+    height:150px;
+    border : 2px solid lightgrey;
+    text-align: center;
+    cursor: pointer;
+    color : lightgrey;
+}
+
+#startContainer:hover{
+    border: 3px solid lightseagreen;
+    color : lightseagreen;
+}
+
+#hud{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+#hud-item{
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.ques{
+    font-weight: bold;
+    height: 10px;
+    margin-top: 10px;
+}
+
+.quesCount {
+    margin-top: 20px;
+}
+
+.score{
+    font-weight: bold;
+    height: 10px;
+    margin-top: 10px;
+}
+
+.scoreCount {
+    margin-top: 20px;
+}
+
+#question{
+    font-size: 2rem;
+    width: 100%;
+    font-weight: bold;    
+    margin-left: 30px;
+}
+
+#question > p {
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+.green {
+    background-color: rgb(26, 185, 26);
+}
+
+.red {
+    background-color: rgb(248, 60, 60);
+}
+
+#choices{
+    width : 94%;
+    height: 250px;
+    font-size: 20px;
+    margin-left: 10px;
+    padding : 0px 10px
+}
+.choice{
+    display: inline-block;
+    width : 100%;
+    text-align: center;
+    border : 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 10px;
+}
+
+.choice:hover{
+    border : 2px solid grey;
+    font-weight: bold;
+}
+
+#btn{
+    width: 100%;
+    position: relative;  
+}
+
+#next-btn{
+    position: absolute;
+    right: 70px;
+    top: 0;
+    background-color: #222;
+    border-radius: 4px;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    min-height: 44px;
+    min-width: 10px;
+    padding: 9px 20px 8px;
+    text-align: center;
+    width: 10%;
+}
+
+#next-btn:hover{
+    color: white;
+    background-color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: .75;
+}
+
+
+#rest-btn {
+    background-color: #222;
+    border-radius: 4px;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    min-height: 44px;
+    min-width: 10px;
+    padding: 9px 20px 8px;
+    text-align: center;
+    width: 10%;
+    position: absolute;
+    left: -8px;
+    top: 0;
+}
+
+#rest-btn:hover
+{
+    opacity: .75;
+}
+
+#scoreContainer{
+    margin : 20px auto;
+    background-color: white;
+    height: 300px;
+    width : 700px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+}
+
+#scoreContainer p{
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 59px;
+    top: 130px;
+    left: 260px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#scoreContainer div button {
+    position: absolute;
+    top: 180px;
+    left: 270px;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #222;
+    border-radius: 4px;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    min-height: 44px;
+    min-width: 10px;
+    padding: 9px 20px 8px;
+    text-align: center;
+    width: 15%;
+}
+
+#scoreContainer div button:hover {
+    opacity: 0.75;
+}
+
+.white-color {
+    color:white;
+    font-size: 1rem;
+    }
+
+button{
+    position: absolute;
+    top: 90%;
+    right:3%;
+    transform: translate(40%,-5%);
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #010101;
+    cursor: pointer;
+}
+
+
+.stars {
+    background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png);
+    z-index: -1;
+}
+
+.stars,
+.twinkling{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.twinkling {
+    background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png);
+    z-index: -1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 5000px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

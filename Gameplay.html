@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/gameplay.css">
+</head>
+
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <div>
+        <audio loop autoplay>
+            <source src="./music/04. Day One.mp3" type="audio/mpeg">
+        </audio>
+
+        <button id="pauseBtn" onclick="playMusic(audio)">
+            <i class="fas fa-music white-color"></i>
+            <span></span>
+        </button>
+    </div>
+
+    <div id="start">  
+        <div class="quiz-heading">
+            <h1>Astronomy Quiz</h1>
+        </div>
+        <div id="startContainer">
+            <h3>Start Quiz!</h3>
+        </div>
+    </div>
+    <div id="container" style="display: none;">
+        <div id="quiz">
+            <div id="hud">
+                <div id="hud-item">
+                    <p class="ques">
+                        Question
+                    </p>
+                    <h1 class="quesCount" id="quesCounttxt">
+                        1/10
+                    </h1>
+                </div>
+                <div id="hud-item">
+                    <p class="score">
+                        Score
+                    </p>
+                    <h1 class="scoreCount" id="scoreCounttxt">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <div id="question"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+            </div>
+            <div id="btn">
+                <div id="nextbtn"> 
+                    <button id="next-btn"  class="button-31">Next</button>
+                </div>
+                <div id="restartbtn">
+                    <button id="rest-btn" onclick="location.reload()">Restart</button>
+                </div>
+            </div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="js/gameplay.js"></script>
+</body>
+
+</html>
+
+
